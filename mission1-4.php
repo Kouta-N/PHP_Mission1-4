@@ -1,6 +1,6 @@
 <?php
 $hands=['グー','チョキ','パー'];
-if(!empty($_POST['battle'])){
+if(!empty($_POST['start'])){
   $pcHand=rand(0,count($hands)-1);
 }
 function janken($userNum,$pcNum):void{
@@ -34,9 +34,9 @@ function janken($userNum,$pcNum):void{
       <option value=2>パー</option>
     </select>
     <br>
-    <input type="submit" name="battle" value="じゃんけん!" />
+    <input type="submit" name="start" value="じゃんけん!" />
   </form>
-  <?php if(!empty($_POST['battle'])):?>
+  <?php if(!empty($_POST['start'])):?>
   <?php echo '自分: '.$hands[$_POST['selectHand']].'<br>相手: '.$hands[$pcHand].'<br>'?>
   <?php janken($_POST['selectHand'],$pcHand) ?>
   <?php endif;?>
