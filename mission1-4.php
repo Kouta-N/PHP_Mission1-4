@@ -27,19 +27,7 @@ function janken($userNum,$pcNum):void{
 </head>
 
 <body>
-  <form method="POST" action="mission1-4.php">
-    <select class="form" id="selectHand" name="selectHand">
-      <option value=0>グー</option>
-      <option value=1>チョキ</option>
-      <option value=2>パー</option>
-    </select>
-    <br>
-    <input type="submit" name="battle" value="じゃんけん!" />
-  </form>
-  <?php if(!empty($_POST['battle'])):?>
-  <?php echo '自分: '.$hands[$_POST['selectHand']].'<br>相手: '.$hands[$pcHand].'<br>'?>
-  <?php janken($_POST['selectHand'],$pcHand) ?>
-  <?php endif;?>
+
 </body>
 
 </html>
